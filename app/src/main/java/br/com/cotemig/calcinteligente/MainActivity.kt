@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     //  private val binding get() = _binding!!
     private lateinit var binding: ActivityMainBinding
     var valorStr = ""
+    var desl = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,8 +53,14 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.btAC.setOnClickListener {
-            binding.tvVisor.text = ""
+            binding.tvVisor.text = "0"
             valorStr = ""
+            desl++
+
+            if(desl >= 2){
+                binding.tvVisor.text = ""
+                desl = 0
+            }
         }
 
 
@@ -70,5 +77,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.tvVisor.text = valorStr
+        desl = 0
     }
 }
