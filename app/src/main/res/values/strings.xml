@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CalcInteligente</string>
+
+    <string name="tc0">0</string>
+    <string name="tc1">1</string>
+    <string name="tc2">2</string>
+    <string name="tc3">3</string>
+    <string name="tc4">4</string>
+    <string name="tc5">5</string>
+    <string name="tc6">6</string>
+    <string name="tc7">7</string>
+    <string name="tc8">8</string>
+    <string name="tc9">9</string>
+
+    <string name="tcMais">+</string>
+    <string name="tcMenos">-</string>
+    <string name="tcMultiplicacao">X</string>
+    <string name="tcDivisao">÷</string>
+    <string name="tcPercentual">%</string>
+    <string name="tcAC">AC</string>
+    <string name="tcMaisMenos">+/-</string>
+
+    <string name="tcVirgula">,</string>
+    <string name="tcIgual">=</string>
+</resources>
