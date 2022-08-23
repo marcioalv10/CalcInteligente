@@ -51,28 +51,44 @@ class MainActivity : AppCompatActivity() {
             preenche("9")
         }
 
+        binding.btVrigula.setOnClickListener {
+            separaDecimal()
+        }
+
 
         binding.btAC.setOnClickListener {
             binding.tvVisor.text = "0"
             valorStr = ""
             desl++
 
-            if(desl >= 2){
+            if (desl >= 2) {
                 binding.tvVisor.text = ""
                 desl = 0
             }
         }
 
 
+    }
 
+    private fun separaDecimal() {
+        if (valorStr.isEmpty()) {
+            valorStr = "0"
+            binding.tvVisor.text = valorStr
+        }
+        if (!valorStr.contains(",") && !valorStr.contains(".") ) {
+            if (!binding.tvVisor.text.equals("-")) {
+                valorStr += ","
+                binding.tvVisor.text = valorStr
+            }
+        }
     }
 
     private fun preenche(s: String) {
 
-        if(!valorStr.equals("0")){
+        if (!valorStr.equals("0")) {
 
             valorStr += s
-        }else{
+        } else {
             valorStr = s
         }
 
